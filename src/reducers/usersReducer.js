@@ -1,6 +1,6 @@
 function usersReducer(state = { users: [], requesting: false }, action) {
    switch (action.type) {
-      case 'GET_USERS_REQUEST':
+      case 'LOADING_USERS':
          return {
             ...state,
             users: [...state.users],
@@ -10,10 +10,10 @@ function usersReducer(state = { users: [], requesting: false }, action) {
       case 'ADD_USER':
          return {
             ...state,
-            users: [...state.users],
+            users: action.users,
             requesting: false
          }
-         
+
       default:
          return state;
    }

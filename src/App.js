@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
+import { fetchUsers } from './actions/fetchUsers';
+import { connect } from 'react-redux';
 
 class App extends Component {
+
+  componentDidMount() {
+    console.log(this.props)
+    this.props.fetchUsers();
+  }
+
   render() {
     return (
       <div className="App">
@@ -25,4 +33,17 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    user: state.users,
+    requesting: state.requesting
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchUsers: () => dispatch(fetchUsers())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
