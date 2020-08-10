@@ -1,5 +1,5 @@
 export const fetchUsers = () => {
-   const usersUrl = 'http://localhost:3001/api/v1/users';
+   const usersUrl = 'http://localhost:3000/api/v1/users';
 
    return (dispatch) => {
       dispatch({ type: 'LOADING_USERS' });
