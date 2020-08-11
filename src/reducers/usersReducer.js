@@ -1,17 +1,17 @@
-function usersReducer(state = { users: [], requesting: false }, action) {
+const usersReducer = (state = { users: [], loading: false }, action) => {
    switch (action.type) {
       case 'LOADING_USERS':
          return {
             ...state,
             users: [...state.users],
-            requesting: true 
+            loading: true 
          }
 
-      case 'ADD_USERS':
+      case 'FETCH_USERS':
          return {
             ...state,
             users: action.users,
-            requesting: false
+            loading: false
          }
 
       default:
