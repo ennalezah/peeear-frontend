@@ -3,7 +3,7 @@ export const fetchUsers = () => {
 
    return (dispatch) => {
       dispatch({ type: 'LOADING_USERS' });
-
+      console.log("Loading users...")
       fetch(usersUrl)
          .then(resp => resp.json())
          .then(users => {

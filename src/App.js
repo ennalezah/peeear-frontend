@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { fetchUsers } from './actions/fetchUsers';
 import { connect } from 'react-redux';
+import UsersContainer from './components/UsersContainer'
 
 class App extends Component {
 
@@ -13,21 +14,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header> */}
-        <p>I'm a React app.</p>
+        <header className="App-header">
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
+          <h1>PEEEAR</h1>
+          <h3>Find a project, work with a partner, and get coding!</h3>
+        </header>
+
+        <UsersContainer users={ this.props.users } />
       </div>
     );
   }
@@ -35,7 +28,7 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    user: state.users,
+    users: state.users,
     requesting: state.requesting
   }
 }

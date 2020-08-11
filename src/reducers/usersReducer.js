@@ -7,7 +7,7 @@ function usersReducer(state = { users: [], requesting: false }, action) {
             requesting: true 
          }
 
-      case 'ADD_USER':
+      case 'ADD_USERS':
          return {
             ...state,
             users: action.users,
