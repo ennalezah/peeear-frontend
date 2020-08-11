@@ -7,7 +7,7 @@ export const fetchUsers = () => {
          .then(resp => resp.json())
          .then(usersJSON => {
             dispatch({ type: 'FETCH_USERS', users: usersJSON })
-            console.log(usersJSON);
+            // console.log(usersJSON);
          });
    };
 }

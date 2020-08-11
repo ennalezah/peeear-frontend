@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
-import { fetchUsers } from './actions/userActions';
+// import { fetchUsers } from './actions/userActions';
 import { fetchProjects } from './actions/projectActions';
 
 import { connect } from 'react-redux';
-import UsersContainer from './components/UsersContainer'
+// import UsersContainer from './components/UsersContainer'
 import ProjectsContainer from './components/ProjectsContainer'
 
 class App extends Component {
 
   componentDidMount() {
     console.log(this.props);
-    this.props.fetchUsers();
+    // this.props.fetchUsers();
     this.props.fetchProjects();
   }
 
@@ -24,7 +24,7 @@ class App extends Component {
           <h3>Find a project, work with a partner, and get coding!</h3>          
         </header>
 
-        <UsersContainer usersData={ this.props.users } />
+        {/* <UsersContainer usersData={ this.props.users } /> */}
 
         <hr />
 
@@ -36,15 +36,15 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    users: state.users,
-    projects: state.projects
-    // loading: state.loading
+    // users: state.users,
+    projects: state.projects,
+    loading: state.loading
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchUsers: () => dispatch(fetchUsers()),
+    // fetchUsers: () => dispatch(fetchUsers()),
     fetchProjects: () => dispatch(fetchProjects())
   }
 }
