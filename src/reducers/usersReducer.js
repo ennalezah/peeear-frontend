@@ -1,17 +1,17 @@
-const usersReducer = (state = { users: [], loading: false }, action) => {
+const usersReducer = (state = { users: [], usersLoading: false }, action) => {
    switch (action.type) {
       case 'LOADING_USERS':
          return {
             ...state,
             users: [...state.users],
-            loading: true 
+            usersLoading: true 
          }
 
       case 'FETCH_USERS':
          return {
             ...state,
             users: action.users,
-            loading: false
+            usersLoading: false
          }
 
       default:

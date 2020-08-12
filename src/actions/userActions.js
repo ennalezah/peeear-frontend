@@ -1,7 +1,7 @@
 export const fetchUsers = () => {
    return (dispatch) => {
-      // dispatch({ type: 'LOADING_USERS' });
-      // console.log("Loading users...")
+      dispatch({ type: 'LOADING_USERS' });
+      console.log("Loading users...")
 
       fetch("http://localhost:3000/api/v1/users")
          .then(resp => resp.json())
