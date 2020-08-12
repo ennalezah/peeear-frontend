@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 
 class ProjectsContainer extends Component {
    state = {
-
+      title: "",
+      description: "",
+      difficulty: "",
+      ownerId: ""
    }
 
    displayProjects = () => {
@@ -17,6 +20,16 @@ class ProjectsContainer extends Component {
       })
    }
 
+   handleChange = (event) => {
+      this.setState({
+         [event.target.name]: event.target.value
+      })
+   }
+
+   handleSubmit = (event) => {
+      event.preventDefault();
+   }
+
    render() {
       return(
          <div>
@@ -24,20 +37,20 @@ class ProjectsContainer extends Component {
             { this.displayProjects() }
 
             <h3>Create a New Project</h3>
-            <form>
+            <form onSubmit={this.handleSubmit}>
                <p>
                   <label>Title</label>
-                  <input type="text" onChange={this.handleChange} />
+                  <input type="text" value={this.state.title} onChange={this.handleChange} />
                </p>
 
                <p>
                   <label>Description</label>
-                  <textarea onChange={this.handleChange} />
+                  <textarea value={this.state.description} onChange={this.handleChange} />
                </p>
 
                <p>
                   <label>Difficulty</label>
-                  <select value={this.state.value} onChange={this.handleChange}>
+                  <select value={this.state.difficulty} onChange={this.handleChange}>
                      <option hidden disabled selected value>Select one</option>
                      <option value="Beginner">Beginner</option>
                      <option value="Intermediate">Intermediate</option>
@@ -47,7 +60,7 @@ class ProjectsContainer extends Component {
 
                <p>
                   <label>Owner ID</label>
-                  <input type="text" onChange={this.handleChange} />
+                  <input type="text" value={this.state.ownerId} onChange={this.handleChange} />
                </p>
 
                <input type="submit" value="Submit"/>
