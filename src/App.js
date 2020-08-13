@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { fetchUsers } from './actions/userActions';
 import UsersContainer from './components/UsersContainer'
 
-import { fetchProjects } from './actions/projectActions';
+import { fetchProjects, addProject } from './actions/projectActions';
 import ProjectsContainer from './components/ProjectsContainer'
 
 
@@ -52,7 +52,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchUsers: () => dispatch(fetchUsers()),
-    fetchProjects: () => dispatch(fetchProjects())
+    fetchProjects: () => dispatch(fetchProjects()),
+    addProject: (formData) => dispatch(addProject(formData))
   }
 }
 

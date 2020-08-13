@@ -14,9 +14,14 @@ export const fetchProjects = () => {
    }
 };
 
-// export const addProject = () => {
-//    return (dispatch) => {
-//       fetch(projectsUrl)
-//          .then
-//    }
-// }
+export const addProject = (formData) => {
+   return (dispatch) => {
+      fetch(projectsUrl, {
+         method: 'POST',
+         headers: { 'Content-Type': 'application/json' },
+         body: JSON.stringify(formData)
+      })
+         .then(resp => resp.json())
+         .then(newProjectData => dispatch({ type: 'ADD_PROJECT', payload: newProjectData }))
+   }
+}

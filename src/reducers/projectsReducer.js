@@ -14,6 +14,8 @@ function projectsReducer(state = { projects: [], projectsLoading: false }, actio
             projectsLoading: false
          }
 
+      
+
       default:
          return state;
    }
