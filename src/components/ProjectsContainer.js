@@ -7,7 +7,7 @@ class ProjectsContainer extends Component {
          title: "",
          description: "",
          difficulty: "",
-         ownerId: ""
+         owner_id: ""
       };
    }
 
@@ -31,6 +31,7 @@ class ProjectsContainer extends Component {
 
    handleSubmit = (event) => {
       event.preventDefault();
+      this.props.addProject(this.state)
    }
 
    render() {
@@ -62,7 +63,7 @@ class ProjectsContainer extends Component {
 
                <p>
                   <label>Owner ID</label>
-                  <input type="text" name="ownerId" value={this.state.ownerId} onChange={this.handleChange} />
+                  <input type="text" name="owner_id" value={this.state.ownerId} onChange={this.handleChange} />
                </p>
 
                <input type="submit" value="Submit"/>

@@ -14,7 +14,12 @@ function projectsReducer(state = { projects: [], projectsLoading: false }, actio
             projectsLoading: false
          }
 
-      
+      case 'ADD_PROJECT':
+         return {
+            ...state,
+            projects: state.projects.concat(action.payload),
+            projectsLoading: false
+         }
 
       default:
          return state;

@@ -33,7 +33,7 @@ class App extends Component {
 
         <hr />
 
-        <ProjectsContainer projectsData={ this.props.projects } />
+        <ProjectsContainer projectsData={ this.props.projects } addProject={ (formData) => this.props.addProject(formData) }/>
       </div>
     );
   }
