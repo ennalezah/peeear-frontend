@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 
 class ProjectsContainer extends Component {
-   state = {
-      title: "",
-      description: "",
-      difficulty: "",
-      ownerId: ""
+   constructor() {
+      super();
+      this.state = {
+         title: "",
+         description: "",
+         difficulty: "",
+         ownerId: ""
+      };
    }
 
    displayProjects = () => {
@@ -22,8 +25,9 @@ class ProjectsContainer extends Component {
 
    handleChange = (event) => {
       this.setState({
-         [event.target.name]: event.target.value
-      })
+         [event.target.name]: event.target.value,
+      });
+      // console.log(this.state)
    }
 
    handleSubmit = (event) => {
@@ -36,22 +40,21 @@ class ProjectsContainer extends Component {
             <h3>Projects</h3>
             { this.displayProjects() }
 
-            <h3>Create a New Project</h3>
+
+            {/* *** START - NEW PROJECT FORM *** */}
+            <h3>Add a New Project</h3>
             <form onSubmit={this.handleSubmit}>
                <p>
-                  <label>Title</label>
-                  <input type="text" value={this.state.title} onChange={this.handleChange} />
+                  <input type="text" name="title" value={this.state.title} onChange={this.handleChange} placeholder="Title"/>
                </p>
 
                <p>
-                  <label>Description</label>
-                  <textarea value={this.state.description} onChange={this.handleChange} />
+                  <textarea name="description" value={this.state.description} onChange={this.handleChange} placeholder="Describe your project in detail. What are some features on it? What can users do with it? What problem are you trying to solve?" />
                </p>
 
                <p>
-                  <label>Difficulty</label>
-                  <select value={this.state.difficulty} onChange={this.handleChange}>
-                     <option hidden disabled selected value>Select one</option>
+                  <select name="difficulty" value={this.state.difficulty} onChange={this.handleChange} >
+                     <option hidden selected value>Difficulty (select one)</option>
                      <option value="Beginner">Beginner</option>
                      <option value="Intermediate">Intermediate</option>
                      <option value="Advanced">Advanced</option>
@@ -60,11 +63,13 @@ class ProjectsContainer extends Component {
 
                <p>
                   <label>Owner ID</label>
-                  <input type="text" value={this.state.ownerId} onChange={this.handleChange} />
+                  <input type="text" name="ownerId" value={this.state.ownerId} onChange={this.handleChange} />
                </p>
 
                <input type="submit" value="Submit"/>
             </form>
+            {/* *** END - NEW PROJECT FORM *** */}
+
          </div>
       )
    }
