@@ -31,16 +31,16 @@ class ProjectsContainer extends Component {
       })
    }
 
-   handleChange = (event) => {
-      this.setState({
-         [event.target.name]: event.target.value,
-      });
-   }
+   // handleChange = (event) => {
+   //    this.setState({
+   //       [event.target.name]: event.target.value,
+   //    });
+   // }
 
-   handleSubmit = (event) => {
-      event.preventDefault();
-      this.props.addProject(this.state)
-   }
+   // handleSubmit = (event) => {
+   //    event.preventDefault();
+   //    this.props.addProject(this.state)
+   // }
 
    render() {
       return(
