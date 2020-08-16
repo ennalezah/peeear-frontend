@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
 class ProjectsContainer extends Component {
-   constructor() {
-      super();
-      this.state = {
-         title: "",
-         description: "",
-         difficulty: "",
-         owner_id: ""
-      };
-   }
+   // constructor() {
+   //    super();
+   //    this.state = {
+   //       title: "",
+   //       description: "",
+   //       difficulty: "",
+   //       owner_id: ""
+   //    };
+   // }
 
    displayProjects = () => {
       // return console.log(this.props.projectsData.projects)

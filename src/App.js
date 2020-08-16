@@ -6,7 +6,7 @@ import { fetchUsers } from './actions/userActions';
 import UsersContainer from './components/UsersContainer'
 
 import { fetchProjects, addProject } from './actions/projectActions';
-import ProjectsContainer from './components/ProjectsContainer'
+import ProjectsContainer from './components/project/ProjectsContainer'
 
 
 
