@@ -5,7 +5,7 @@ class ProjectsContainer extends Component {
    displayProjectCard = () => {
       // return console.log(this.prosps.projectsData.projects)
 
-      return this.props.projectsData.projects.map(project => <ProjectCard title={project.title} description={project.description} difficulty={project.difficulty} />)
+      return this.props.projectsData.projects.map(project => <ProjectCard title={project.title} description={project.description} difficulty={project.difficulty} /> )
    }
 
    render() {

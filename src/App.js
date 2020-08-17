@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 
-import { fetchUsers } from './actions/userActions';
+// import { fetchUsers } from './actions/userActions';
 // import UsersContainer from './components/UsersContainer';
 
 import { fetchProjects, addProject } from './actions/projectActions';
 import ProjectsContainer from './components/ProjectsContainer';
 import NewProjectContainer  from './components/NewProjectContainer'
+
+import { HowItWorks } from './components/HowItWorks'
 
 
 
@@ -17,7 +19,7 @@ class App extends Component {
 
   componentDidMount() {
     console.log(this.props);
-    this.props.fetchUsers();
+    // this.props.fetchUsers();
     this.props.fetchProjects();
   }
 
@@ -26,9 +28,10 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <h1>PEEEAR</h1>
-          <h3>Find a project, work with a partner, and get coding!</h3>          
+          <h1>PEEEAR</h1>       
         </header>
+
+        <HowItWorks />
 
         {/* <UsersContainer usersData={ this.props.users } /> */}
 
@@ -42,8 +45,8 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    users: state.users,
-    usersLoading: state.usersLoading,
+    // users: state.users,
+    // usersLoading: state.usersLoading,
     projects: state.projects,
     projectsLoading: state.projectsLoading
     
@@ -52,7 +55,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchUsers: () => dispatch(fetchUsers()),
+    // fetchUsers: () => dispatch(fetchUsers()),
     fetchProjects: () => dispatch(fetchProjects()),
     addProject: (formData) => dispatch(addProject(formData))
   }
