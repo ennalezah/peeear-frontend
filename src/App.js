@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route } from  'react-router-dom';
 import { connect } from 'react-redux';
 
 // import { fetchUsers } from './actions/userActions';
@@ -9,10 +10,9 @@ import { fetchProjects, addProject } from './actions/projectActions';
 import ProjectsContainer from './components/ProjectsContainer';
 import NewProjectContainer  from './components/NewProjectContainer'
 
-import { HowItWorks } from './components/HowItWorks'
-
-
-
+import { Home } from './components/Home';
+import { HowItWorks } from './components/HowItWorks';
+import { NewProjectContainer as NewProjectForm } from './components/NewProjectContainer';
 
 
 class App extends Component {
@@ -26,12 +26,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <h1>PEEEAR</h1>       
-        </header>
-
-        <HowItWorks />
+        <Router>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/how-it-works' component={HowItWorks} />
+          <Route exact path='/add-new-project' component={NewProjectForm} />
+        </Router>
+        
+        {/* <HowItWorks /> */}
 
         {/* <UsersContainer usersData={ this.props.users } /> */}
 
@@ -47,8 +48,8 @@ const mapStateToProps = (state) => {
   return {
     // users: state.users,
     // usersLoading: state.usersLoading,
-    projects: state.projects,
-    projectsLoading: state.projectsLoading
+    projects: state.projects
+    // projectsLoading: state.projectsLoading
     
   }
 }

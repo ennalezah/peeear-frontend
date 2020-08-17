@@ -13,7 +13,7 @@ export const HowItWorks = () => {
 
          <div>
             <h3>Step 2: Work as a Pair</h3>
-            <p>Contact the project's poster and let them know you want to pair up.</p>
+            <p>Contact the project's poster to let them know you want to pair up.</p>
          </div>
 
 
