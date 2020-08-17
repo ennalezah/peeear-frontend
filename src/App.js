@@ -3,11 +3,11 @@ import './App.css';
 import { connect } from 'react-redux';
 
 import { fetchUsers } from './actions/userActions';
-import UsersContainer from './components/UsersContainer'
+// import UsersContainer from './components/UsersContainer';
 
 import { fetchProjects, addProject } from './actions/projectActions';
-import ProjectsContainer from './components/projects/ProjectsContainer';
-import NewProjectContainer  from './components/projects/NewProjectContainer'
+import ProjectsContainer from './components/ProjectsContainer';
+import NewProjectContainer  from './components/NewProjectContainer'
 
 
 
@@ -30,9 +30,7 @@ class App extends Component {
           <h3>Find a project, work with a partner, and get coding!</h3>          
         </header>
 
-        <UsersContainer usersData={ this.props.users } />
-
-        <hr />
+        {/* <UsersContainer usersData={ this.props.users } /> */}
 
         <ProjectsContainer projectsData={ this.props.projects } />
 

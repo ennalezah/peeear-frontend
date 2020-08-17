@@ -10,6 +10,7 @@ export const fetchProjects = () => {
          .then(projectsJSON => {
             dispatch({ type: 'FETCH_PROJECTS', projects: projectsJSON })
             // console.log(projectsJSON)
+            // debugger
          });
    }
 };
@@ -24,7 +25,6 @@ export const addProject = (formData) => {
          .then(resp => resp.json())
          .then(newProjectData => {
             dispatch({ type: 'ADD_PROJECT', payload: newProjectData })
-            console.log(newProjectData)
          })
    }
 }
