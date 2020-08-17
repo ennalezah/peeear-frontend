@@ -12,11 +12,9 @@ import NewProjectContainer  from './components/NewProjectContainer'
 
 import { Home } from './components/Home';
 import { HowItWorks } from './components/HowItWorks';
-import { NewProjectContainer as NewProjectForm } from './components/NewProjectContainer';
-
+import { NavBar } from './components/NavBar'
 
 class App extends Component {
-
   componentDidMount() {
     console.log(this.props);
     // this.props.fetchUsers();
@@ -27,9 +25,13 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/how-it-works' component={HowItWorks} />
-          <Route exact path='/add-new-project' component={NewProjectForm} />
+          <div>
+
+            <Route exact path='/' component={ Home } />
+            <Route exact path='/how-it-works' component={ HowItWorks } />
+            <Route exact path='/projects' component={ ProjectsContainer } />
+            <Route exact path='/add-new-project' component={ NewProjectContainer } />
+          </div>
         </Router>
         
         {/* <HowItWorks /> */}
