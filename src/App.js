@@ -6,7 +6,8 @@ import { fetchUsers } from './actions/userActions';
 import UsersContainer from './components/UsersContainer'
 
 import { fetchProjects, addProject } from './actions/projectActions';
-import ProjectsContainer from './components/project/ProjectsContainer'
+import ProjectsContainer from './components/projects/ProjectsContainer';
+import NewProjectContainer  from './components/projects/NewProjectContainer'
 
 
 
@@ -33,7 +34,9 @@ class App extends Component {
 
         <hr />
 
-        <ProjectsContainer projectsData={ this.props.projects } addProject={ (formData) => this.props.addProject(formData) }/>
+        <ProjectsContainer projectsData={ this.props.projects } />
+
+        <NewProjectContainer projectsData={ this.props.projects } addProject={ (formData) => this.props.addProject(formData) }/>
       </div>
     );
   }
