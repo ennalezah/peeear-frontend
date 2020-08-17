@@ -4,8 +4,8 @@ import { ProjectCard } from  './ProjectCard';
 class ProjectsContainer extends Component {
    displayProjectCard = () => {
       // return console.log(this.prosps.projectsData.projects)
-      return this.props.projectsData.projects.map(project => <ProjectCard title={project.title} description={project.description} difficulty={project.difficulty} created={project.created_at}/>
-      )
+
+      return this.props.projectsData.projects.map(project => <ProjectCard title={project.title} description={project.description} difficulty={project.difficulty} />)
    }
 
    render() {
