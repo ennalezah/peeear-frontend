@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { NewProjectForm } from './NewProjectForm'
+import { NewProjectForm } from '../NewProjectForm'
 
 class NewProjectContaner extends Component {
    constructor() {

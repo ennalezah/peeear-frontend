@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 import { fetchProjects, addProject } from './actions/projectActions';
 import ProjectsContainer from './components/ProjectsContainer';
-import NewProjectContainer  from './components/NewProjectContainer'
+import NewProjectContainer  from './components/containers/NewProject'
 
 import { Home } from './components/Home';
 import { NavBar } from './components/NavBar'
