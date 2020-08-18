@@ -30,8 +30,14 @@ class App extends Component {
 
             <Switch>
               <Route exact path='/' component={ Home } />
-              <Route exact path='/projects' component={ ProjectsContainer } />
-              <Route exact path='/add-new-project' component={ NewProjectContainer } />
+
+              {/* <Route exact path='/projects' component={ ProjectsContainer } /> */}
+
+              <Route exact path='/projects' render={(props) => <ProjectsContainer projectsData={ this.props.projects }/>} />
+              
+              {/* <Route exact path='/add-new-project' component={ NewProjectContainer } /> */}
+
+              <Route exact path='/add-new-project' render={ (props) => <NewProjectContainer projectsData={ this.props.projects } addProject={ (formData) => this.props.addProject(formData) }/> } />
             </Switch>            
           </div>
         </Router>
