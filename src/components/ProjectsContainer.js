@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import App from '../App';
-
 import { ProjectCard } from  './ProjectCard';
 
 class ProjectsContainer extends Component {
