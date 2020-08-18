@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 class NewProjectContaner extends Component {
    constructor() {
       super();
+
       this.state = {
          title: "",
          description: "",
@@ -29,7 +31,7 @@ class NewProjectContaner extends Component {
       });
 
       alert("Project successfully added!");
-      
+      this.props.history.push('/projects')
    }
 
    render() {
@@ -66,4 +68,4 @@ class NewProjectContaner extends Component {
    }
 }
 
-export default NewProjectContaner;
+export default withRouter(NewProjectContaner);
