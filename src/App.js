@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route } from  'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from  'react-router-dom';
 import { connect } from 'react-redux';
 
 // import { fetchUsers } from './actions/userActions';
@@ -16,7 +16,7 @@ import { NavBar } from './components/NavBar'
 
 class App extends Component {
   componentDidMount() {
-    console.log(this.props);
+    // console.log(this.props);
     // this.props.fetchUsers();
     this.props.fetchProjects();
   }
@@ -26,21 +26,21 @@ class App extends Component {
       <div className="App">
         <Router>
           <div>
+            <NavBar />
 
-            <Route exact path='/' component={ Home } />
-            <Route exact path='/how-it-works' component={ HowItWorks } />
-            <Route exact path='/projects' component={ ProjectsContainer } />
-            <Route exact path='/add-new-project' component={ NewProjectContainer } />
+            <Switch>
+              <Route exact path='/' component={ Home } />
+              <Route exact path='/projects' component={ ProjectsContainer } />
+              <Route exact path='/add-new-project' component={ NewProjectContainer } />
+            </Switch>            
           </div>
         </Router>
-        
-        {/* <HowItWorks /> */}
 
         {/* <UsersContainer usersData={ this.props.users } /> */}
 
-        <ProjectsContainer projectsData={ this.props.projects } />
+        {/* <ProjectsContainer projectsData={ this.props.projects } /> */}
 
-        <NewProjectContainer projectsData={ this.props.projects } addProject={ (formData) => this.props.addProject(formData) }/>
+        {/* <NewProjectContainer projectsData={ this.props.projects } addProject={ (formData) => this.props.addProject(formData) }/> */}
       </div>
     );
   }

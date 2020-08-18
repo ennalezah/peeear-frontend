@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import App from '../App';
+
 import { ProjectCard } from  './ProjectCard';
 
 class ProjectsContainer extends Component {
    displayProjectCard = () => {
-      // return console.log(this.prosps.projectsData.projects)
+      console.log(this.props)
+      debugger
+      // return console.log(this.props.projectsData.projects)
 
       return this.props.projectsData.projects.map(project => <ProjectCard title={project.title} description={project.description} difficulty={project.difficulty} /> )
    }
@@ -18,4 +22,4 @@ class ProjectsContainer extends Component {
    }
 }
 
-export default ProjectsContainer;
+ export default ProjectsContainer;
