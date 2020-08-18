@@ -29,7 +29,7 @@ class NewProjectContaner extends Component {
       });
 
       alert("Project successfully added!");
-
+      
    }
 
    render() {
