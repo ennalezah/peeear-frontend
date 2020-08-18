@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ProjectCard } from  './ProjectCard';
+import { ProjectCard } from  '../ProjectCard';
 
 class ProjectsContainer extends Component {
    displayProjectCard = () => {

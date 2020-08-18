@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from  'react-router-dom';
 import { connect } from 'react-redux';
 
 import { fetchProjects, addProject } from './actions/projectActions';
-import ProjectsContainer from './components/ProjectsContainer';
+import ProjectsContainer from './components/containers/Projects';
 import NewProjectContainer  from './components/containers/NewProject'
 
 import { Home } from './components/Home';
