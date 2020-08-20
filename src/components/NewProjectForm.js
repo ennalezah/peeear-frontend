@@ -21,6 +21,15 @@ export const NewProjectForm = (props) => {
          </p>
 
          <p>
+            <input type="text" name="owner_id" value={props.ownerId} onChange={props.handleChange} />
+         </p>
+
+         <p>
+            <label>Owner ID</label>
+            <input type="text" name="owner_id" value={props.ownerId} onChange={props.handleChange} />
+         </p>
+
+         <p>
             <label>Owner ID</label>
             <input type="text" name="owner_id" value={props.ownerId} onChange={props.handleChange} />
          </p>

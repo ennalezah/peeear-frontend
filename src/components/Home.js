@@ -9,6 +9,7 @@ export const Home = () => {
             <h1>PEEEAR</h1> 
             <h3>Improve your coding skills by pair programming on projects you're interested in</h3>   
          </header>
+         
          <HowItWorks />
       </>
    )

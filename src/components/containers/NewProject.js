@@ -10,7 +10,9 @@ class NewProjectContaner extends Component {
          title: "",
          description: "",
          difficulty: "",
-         owner_id: ""
+         first_name: "",
+         last_name: "",
+         email: ""
       };
    }
 
@@ -28,7 +30,9 @@ class NewProjectContaner extends Component {
          title: "",
          description: "",
          difficulty: "",
-         owner_id: ""
+         first_name: "",
+         last_name: "",
+         email: ""
       });
 
       alert("Project successfully added!");
