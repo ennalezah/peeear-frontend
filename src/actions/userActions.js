@@ -1,11 +1,11 @@
+const usersUrl = "http://localhost:3000/api/v1/users";
+
 export const fetchUsers = () => {
    return (dispatch) => {
-
-      fetch("http://localhost:3000/api/v1/users")
+      fetch(usersUrl)
          .then(resp => resp.json())
-         .then(usersJSON => {
-            dispatch({ type: 'FETCH_USERS', users: usersJSON })
-            // console.log(usersJSON);
+         .then(users => {
+            dispatch({ type: 'FETCH_USERS', payload: users })
          });
    };
 }

@@ -3,13 +3,12 @@ import { ProjectCard } from  '../ProjectCard';
 
 class ProjectsContainer extends Component {
 
-
    displayProjectCard = () => {
       console.log(this.props)
       debugger
       // return console.log(this.props.projectsData.projects)
 
-      return this.props.projectsData.projects.map(project => <ProjectCard {...project} /> 
+      return this.props.projects.map(project => <ProjectCard {...project} /> 
       )
    }
 

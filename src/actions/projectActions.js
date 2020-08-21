@@ -4,9 +4,9 @@ export const fetchProjects = () => {
    return (dispatch) => {
       fetch(projectsUrl)
          .then(resp => resp.json())
-         .then(projectsJSON => {
-            dispatch({ type: 'FETCH_PROJECTS', payload: projectsJSON })
-            // console.log(projectsJSON)
+         .then(projects => {
+            dispatch({ type: 'FETCH_PROJECTS', payload: projects })
+            // console.log(projects)
             // debugger
          });
    }
@@ -20,8 +20,8 @@ export const addProject = (formData) => {
          body: JSON.stringify(formData)
       })
          .then(resp => resp.json())
-         .then(newProjectData => {
-            dispatch({ type: 'ADD_PROJECT', payload: newProjectData.projects })
+         .then(newProject => {
+            dispatch({ type: 'ADD_PROJECT', payload: newProject })
          })
    }
 }
