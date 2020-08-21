@@ -1,7 +1,5 @@
 export const fetchUsers = () => {
    return (dispatch) => {
-      dispatch({ type: 'LOADING_USERS' });
-      console.log("Loading users...")
 
       fetch("http://localhost:3000/api/v1/users")
          .then(resp => resp.json())
@@ -11,3 +9,18 @@ export const fetchUsers = () => {
          });
    };
 }
+
+export const addUser = (formData) => {
+   return (dispatch) => {
+      fetch(projectsUrl, {
+         method: 'POST',
+         headers: { 'Content-Type': 'application/json' },
+         body: JSON.stringify(formData)
+      })
+         .then(resp => resp.json())
+         .then(newProjectData => {
+            dispatch({ type: 'ADD_PROJECT', payload: newProjectData.projects })
+         })
+         debugger
+   }
+ };

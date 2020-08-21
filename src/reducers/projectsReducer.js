@@ -1,25 +1,11 @@
-function projectsReducer(state = { projects: [], projectsLoading: false }, action) {
+const projectsReducer = (state = [], action) => {
    switch (action.type) {
-      case 'LOADING_PROJECTS':
-         return {
-            ...state,
-            projects: [...state.projects],
-            projectsLoading: true 
-         }
 
       case 'FETCH_PROJECTS':
-         return {
-            ...state,
-            projects: action.projects,
-            projectsLoading: false
-         }
+         return [...state, action.payload]
 
       case 'ADD_PROJECT':
-         return {
-            ...state,
-            projects: state.projects.concat(action.payload),
-            projectsLoading: false
-         }
+         return [...state, action.payload]
 
       default:
          return state;

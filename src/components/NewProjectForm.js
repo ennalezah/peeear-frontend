@@ -30,7 +30,7 @@ export const NewProjectForm = (props) => {
          </p> */}
 
          <h3>Contact info</h3>
-         <p>This is how individuals will reach out to you about your project. Please fill out as accurately as possible.</p>
+         <p>This is how individuals will reach out to you about your project. Please fill info out as accurately as possible.</p>
 
          <p>
             <input type="text" name="first_name" value={props.first_name} onChange={props.handleChange} placeholder="First name" required/>

@@ -35,7 +35,7 @@ class NewProjectContaner extends Component {
          email: ""
       });
 
-      alert("Project successfully added!");
+      alert("Project successfully posted!");
       this.props.history.push('/projects')
    }
 
