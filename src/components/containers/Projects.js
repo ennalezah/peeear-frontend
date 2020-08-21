@@ -9,13 +9,7 @@ class ProjectsContainer extends Component {
       debugger
       // return console.log(this.props.projectsData.projects)
 
-      return this.props.projectsData.projects.map(project => <ProjectCard 
-         title={project.title} 
-         description={project.description} 
-         difficulty={project.difficulty} 
-         first_name={project.first_name} 
-         last_name={project.last_name} 
-         email={project.email} /> 
+      return this.props.projectsData.projects.map(project => <ProjectCard {...project} /> 
       )
    }
 
@@ -30,3 +24,11 @@ class ProjectsContainer extends Component {
 }
 
  export default ProjectsContainer;
+
+//  <ProjectCard 
+//          title={project.title} 
+//          description={project.description} 
+//          difficulty={project.difficulty} 
+//          first_name={project.first_name} 
+//          last_name={project.last_name} 
+//          email={project.email} /> 

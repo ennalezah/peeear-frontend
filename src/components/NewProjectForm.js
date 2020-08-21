@@ -4,7 +4,7 @@ export const NewProjectForm = (props) => {
    return(
       <form onSubmit={props.handleSubmit}>
          <p>
-            <select name="difficulty" value={props.difficulty} onChange={props.handleChange} >
+            <select name="difficulty" value={props.difficulty} onChange={props.handleChange} required>
                <option hidden selected value>Difficulty (select one)</option>
                <option value="Beginner">Beginner</option>
                <option value="Intermediate">Intermediate</option>
@@ -29,18 +29,19 @@ export const NewProjectForm = (props) => {
             </select>
          </p> */}
 
-         <h3>Your contact info</h3>
+         <h3>Contact info</h3>
+         <p>This is how individuals will reach out to you about your project. Please fill out as accurately as possible.</p>
 
          <p>
-            <input type="text" name="first_name" value={props.first_name} onChange={props.handleChange} placeholder="First name"/>
+            <input type="text" name="first_name" value={props.first_name} onChange={props.handleChange} placeholder="First name" required/>
          </p>
 
          <p>
-            <input type="text" name="last_name" value={props.last_name} onChange={props.handleChange} placeholder="Last name"/>
+            <input type="text" name="last_name" value={props.last_name} onChange={props.handleChange} placeholder="Last name" required/>
          </p>
 
          <p>
-            <input type="text" name="email" value={props.email} onChange={props.handleChange} placeholder="Email" />
+            <input type="text" name="email" value={props.email} onChange={props.handleChange} placeholder="Email" required />
          </p>
 
          <input type="submit" value="Submit"/>

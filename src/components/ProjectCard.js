@@ -4,10 +4,9 @@ export const ProjectCard = (props) => {
    return(
       <div key={props.id}>
          <h3>{props.title}</h3>
+         <p><strong>Difficulty:</strong> {props.difficulty}</p>
          
          <p>{props.description}</p>
-
-         <p><strong>Difficulty:</strong> {props.difficulty}</p>
          
          ~ ~ ~         
          
