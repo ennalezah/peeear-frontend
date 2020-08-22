@@ -4,11 +4,10 @@ import { Jumbotron } from './Jumbotron';
 
 export const Home = () => {
    return(
-      <>
-         <Jumbotron />         
-         
+      <div>
+         <Jumbotron />           
          <HowItWorks />
-      </>
+      </div>
    )
    
 }
