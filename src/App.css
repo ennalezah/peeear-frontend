@@ -52,3 +52,8 @@
 .form-group {
   width: 50%;
 }
+
+h1, h2 {
+  font-family: 'Caveat Brush', cursive;
+  text-transform: uppercase;
+}
