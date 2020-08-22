@@ -14,15 +14,11 @@ class ProjectsContainer extends Component {
 
    render() {
       return(
-         <div>
+         <div className="container">
             <h1>Projects</h1>
-
-            <div class="container">
-               <div class="row row-cols-4">
-                  { this.displayProjectCard() }
-               </div>
+            <div className="row row-cols-1 row-cols-md-3">
+               { this.displayProjectCard() }                              
             </div>
-            
          </div>
       )
    }
