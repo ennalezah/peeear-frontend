@@ -16,7 +16,13 @@ class ProjectsContainer extends Component {
       return(
          <div>
             <h1>Projects</h1>
-            { this.displayProjectCard() }
+
+            <div class="container">
+               <div class="row row-cols-4">
+                  { this.displayProjectCard() }
+               </div>
+            </div>
+            
          </div>
       )
    }
