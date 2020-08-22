@@ -42,7 +42,7 @@ class NewProjectContaner extends Component {
    render() {
       return(
          <div>
-            <h1>Post a New Project</h1>
+            <h1 className="my-5">Post a New Project</h1>
             <NewProjectForm {...this.state} handleChange={ this.handleChange } handleSubmit={ this.handleSubmit }/>
          </div>
       )
