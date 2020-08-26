@@ -1,68 +1,49 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# PEEEAR (Backend)
 
-## Available Scripts
+Demo: <a href="https://youtu.be/issaJ04pfGU" target="_blank">https://youtu.be/issaJ04pfGU</a>
 
-In the project directory, you can run:
+PEEEAR is an app to help anyone improve their coding skills by pair programmming on projects that they're interested in.
 
-### `yarn start`
+To use PEEEAR, you'll need to clone the following repositories:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Backend: <a href="https://github.com/ennalezah/peeear-backend" target="_blank">https://github.com/ennalezah/peeear-backend</a>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+* Frontend: <a href="https://github.com/ennalezah/peeear-backend" target="_blank">https://github.com/ennalezah/peeear-backend</a>
 
-### `yarn test`
+## Overview
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+PEEEAR is a single-page app built with a Ruby on Rails API backend and a React/Redux for frontend. It allows users to browse projects posted by all users and contact the project's poster by email to let the poster know that they're interestted in pairing for the project. Users are also able to post projects.
 
-### `yarn build`
+Some features to be added in the future:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* User authentication
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+* Users can comment on project postings
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Projects can be filtered by difficulty and/or category
 
-### `yarn eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Clone this repository and the frontend repository. Open your editor of choice, and open both folders. You'll need to have two separate terminals open.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Terminal 1 (backend):
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. To get to the backend directory, enter ```cd peeear-backend```
+2. Enter ```bundle install```
+3. Run ```rails s``` to start the server ```http://localhost:3000/```
+4. When you're done using the app, hold down CTRL + C to exit server.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Terminal 2 (frontend):
 
-## Learn More
+1. To get to the frontend directory enter ```cd peeear-frontend```
+2. Run ```npm start``` and ```http://localhost:3001/``` should open up in your browser. 
+4. When you're done using the app, hold down CTRL + C to exit server.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing
+Bug reports and pull requests are welcome on GitHub at https://github.com/ennalezah/peeear-backend. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
+The project is available as open source under the terms of the <a href="https://github.com/ennalezah/peeear-backend/blob/master/LICENCE" target="_blank">MIT License</a>.
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Code of Conduct
+Everyone interacting in the PEEEAR project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the <a href="https://github.com/ennalezah/peeear-backend/blob/master/CODE_OF_CONDUCT.md" target="_blank">code of conduct</a>.
