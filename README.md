@@ -8,7 +8,7 @@ To use PEEEAR, you'll need to clone the following repositories:
 
 * Backend: <a href="https://github.com/ennalezah/peeear-backend" target="_blank">https://github.com/ennalezah/peeear-backend</a>
 
-* Frontend: <a href="https://github.com/ennalezah/peeear-backend" target="_blank">https://github.com/ennalezah/peeear-backend</a>
+* Frontend: <a href="https://github.com/ennalezah/peeear-frontend" target="_blank">https://github.com/ennalezah/peeear-frontend</a>
 
 ## Overview
 
