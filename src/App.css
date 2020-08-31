@@ -74,5 +74,9 @@ nav.navbar {
 .jumbotron-title {
   font-family: 'Caveat Brush', cursive;
   text-transform: uppercase;
-  font-size: 8em;
+  font-size: 5em;
+}
+
+div#how-it-works {
+  background-color: #efdf96;
 }
