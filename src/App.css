@@ -45,6 +45,10 @@ body, html {
 
 /* BOOTSTRAP */
 
+h1, h2 {
+  color: #423342;
+}
+
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh; /* These two lines are counted as one :-)       */
@@ -75,8 +79,13 @@ nav.navbar {
   font-family: 'Caveat Brush', cursive;
   text-transform: uppercase;
   font-size: 5em;
+  color:#aca2ba;
 }
 
-div#how-it-works {
+.btn.btn-warning {
+  background: #e3b935;
+}
+
+#how-it-works {
   background-color: #efdf96;
 }
