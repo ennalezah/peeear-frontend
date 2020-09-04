@@ -48,10 +48,10 @@ class ProjectsContainer extends Component {
                </button>
 
                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" onClick={this.handleFilter}>Beginner</a>
-                  <a class="dropdown-item" onClick={this.handleFilter}>Intermediate</a>
-                  <a class="dropdown-item" onClick={this.handleFilter}>Advanced</a>
-                  <a class="dropdown-item" onClick={this.handleFilter}>View All</a>
+                     <li class="dropdown-item" onClick={this.handleFilter}>Beginner</li>
+                     <li class="dropdown-item" onClick={this.handleFilter}>Intermediate</li>
+                     <li class="dropdown-item" onClick={this.handleFilter}>Advanced</li>
+                     <li class="dropdown-item" onClick={this.handleFilter}>View All</li>
                </div>
             </div>
 
