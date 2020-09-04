@@ -54,10 +54,12 @@ class ProjectsContainer extends Component {
                      <li class="dropdown-item" onClick={this.handleFilter}>View All</li>
                </div>
             </div>
-
+         
             <div className="row row-cols-1 row-cols-md-3">
-               { this.displayProjectCard() }                              
+               { this.displayProjectCard() }        
             </div>
+            
+            
          </div>
       )
    }
