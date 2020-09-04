@@ -12,7 +12,7 @@ export const ProjectCard = (props) => {
                <p className="card-text"><strong>Difficulty:</strong> {props.difficulty}</p>
             
                <div class="card-footer">
-                  <a className="btn btn-primary" href={`mailto:${props.email}?subject=Re: Your PEEEAR project - ${props.title}&body=Hi ${props.first_name}! I'm interested in pairing up for this project. Please send more info my way. Thanks!"`}>Contact {props.first_name}</a>
+                  <a className="btn btn-primary btn-lg btn-block" href={`mailto:${props.email}?subject=Re: Your PEEEAR project - ${props.title}&body=Hi ${props.first_name}! I'm interested in pairing up for this project. Please send more info my way. Thanks!"`}>Contact {props.first_name}</a>
                </div>            
             </div>
          </div>     

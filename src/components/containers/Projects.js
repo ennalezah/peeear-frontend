@@ -6,24 +6,43 @@ class ProjectsContainer extends Component {
       super();
 
       this.state = {
-         filtered_by: ""
+         filtered_by: "View All"
       }
    }
 
    displayProjectCard = () => {
-      console.log(this.props)
-      // debugger
-      // return console.log(this.props.projectsData.projects)
+      let results;
 
-      return this.props.projects.map(project => <ProjectCard {...project} /> 
-      )
+      switch(this.state.filtered_by) {
+         case 'Beginner':
+           results = this.props.projects.filter(project => project.difficulty === 'Beginner')
+
+           return results.map(project => <ProjectCard {...project} />) 
+
+         case 'Intermediate':
+            results = this.props.projects.filter(project => project.difficulty === 'Intermediate')
+
+            return results.map(project => <ProjectCard {...project} />) 
+
+         case 'Advanced':
+            results = this.props.projects.filter(project => project.difficulty === 'Advanced')
+
+            return results.map(project => <ProjectCard {...project} />) 
+
+         default:
+           return this.props.projects.map(project => <ProjectCard {...project} /> )
+       }
    }
 
    handleFilter = (event) => {
      this.setState({
-        filtered_by: event.target.value
-     })
+        filtered_by: event.target.innerText
+     })    
+     
+   //   alert(this.state.filtered_by)
    }
+
+
 
    render() {
       return(
@@ -37,8 +56,9 @@ class ProjectsContainer extends Component {
 
                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item" onClick={this.handleFilter}>Beginner</a>
-                  <a class="dropdown-item" onClick={this.handleFilter}href="#">Intermediate</a>
+                  <a class="dropdown-item" onClick={this.handleFilter}>Intermediate</a>
                   <a class="dropdown-item" onClick={this.handleFilter}>Advanced</a>
+                  <a class="dropdown-item" onClick={this.handleFilter}>View All</a>
                </div>
             </div>
 
