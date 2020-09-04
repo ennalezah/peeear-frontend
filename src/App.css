@@ -18,8 +18,8 @@ body, html {
 } */
 
 .App-header {
-  background-color: #282c34;
-  /* background-color: #ffffff; */
+  /* background-color: #282c34; */
+  background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -72,20 +72,21 @@ nav.navbar {
 }
 
 .jumbotron {
- background-color: #ffffff;
+ /* background-color: #ffffff; */
+  background: linear-gradient(0deg,rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url('./images/jumbotron-pic.jpg') no-repeat center / cover;
 }
 
 .jumbotron-title {
   font-family: 'Caveat Brush', cursive;
   text-transform: uppercase;
   font-size: 5em;
-  color:#aca2ba;
+  color:#423342;
 }
 
 .btn.btn-warning {
   background: #e3b935;
 }
 
-#how-it-works {
+/* #how-it-works {
   background-color: #efdf96;
-}
+} */
