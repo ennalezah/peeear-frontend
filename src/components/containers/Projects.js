@@ -19,24 +19,28 @@ class ProjectsContainer extends Component {
       )
    }
 
+   handleFilter = (event) => {
+     this.setState({
+        filtered_by: event.target.value
+     })
+   }
+
    render() {
       return(
          <div className="container">
             <h1 className="my-5">Projects</h1>
             
-            <p>
-            <div class="dropdown">
-               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="dropdown text-right mb-5 ">
+               <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Filter by
                </button>
 
                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Beginner</a>
-                  <a class="dropdown-item" href="#">Intermediate</a>
-                  <a class="dropdown-item" href="#">Advanced</a>
+                  <a class="dropdown-item" onClick={this.handleFilter}>Beginner</a>
+                  <a class="dropdown-item" onClick={this.handleFilter}href="#">Intermediate</a>
+                  <a class="dropdown-item" onClick={this.handleFilter}>Advanced</a>
                </div>
             </div>
-            </p>
 
             <div className="row row-cols-1 row-cols-md-3">
                { this.displayProjectCard() }                              
