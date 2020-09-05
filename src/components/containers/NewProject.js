@@ -24,8 +24,9 @@ class NewProjectContaner extends Component {
 
    handleSubmit = (event) => {
       event.preventDefault();
+      // console.log('a')
       this.props.addProject(this.state);
-
+      // console.log('g')
       this.setState({
          title: "",
          description: "",

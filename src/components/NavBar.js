@@ -15,7 +15,7 @@ export const NavBar = () => {
             <div className="navbar-nav">
                <Link to="/" exact className="nav-link active">Home <span className="sr-only">(current)</span></Link>
                <Link to='/projects' exact className="nav-link">Browse Projects</Link>
-               <Link to='/new-project' exact className="nav-link">Post New Project</Link>
+               <Link to='/projects/new' exact className="nav-link">Post New Project</Link>
             </div>
          </div>
       </nav>

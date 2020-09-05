@@ -27,7 +27,8 @@ class App extends Component {
 
               <Route exact path='/projects' render={(props) => <ProjectsContainer projects={ this.props.projects }/>} />
 
-              <Route exact path='/new-project' render={ (props) => <NewProjectContainer addProject={ (formData) => this.props.addProject(formData) }/> } />
+              #/projects/new
+              <Route exact path='/projects/new' render={ (props) => <NewProjectContainer addProject={ (formData) => this.props.addProject(formData) }/> } />
             </Switch>            
           </div>
         </Router>
