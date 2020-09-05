@@ -67,27 +67,28 @@ class ProjectsContainer extends Component {
          <div className="container">
             <h1 className="my-4">Find Your Next Project</h1>
 
-            <div>
-               <input className="text-right" type="text" onChange={this.handleSearch} value={this.state.search.toLowerCase()} placeholder="Search by title"/>
-            </div>
-            
-            <div className="dropdown text-right mb-3">
-               <button className="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Filter by
-               </button>
+            <div className="text-right mb-3">
+               <span className="dropdown mx-3">
+                  <button className="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Filter by
+                  </button>
 
-               <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                     <li className="dropdown-item" onClick={this.handleFilter}>Beginner</li>
-                     <li className="dropdown-item" onClick={this.handleFilter}>Intermediate</li>
-                     <li className="dropdown-item" onClick={this.handleFilter}>Advanced</li>
-                     <li className="dropdown-item" onClick={this.handleFilter}>View All</li>
-               </div>
+                  <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li className="dropdown-item" onClick={this.handleFilter}>Beginner</li>
+                        <li className="dropdown-item" onClick={this.handleFilter}>Intermediate</li>
+                        <li className="dropdown-item" onClick={this.handleFilter}>Advanced</li>
+                        <li className="dropdown-item" onClick={this.handleFilter}>View All</li>
+                  </div>
+               </span>
+
+               <span className="text-right">
+                  <input type="text" onChange={this.handleSearch} value={this.state.search.toLowerCase()} placeholder="Search" />
+               </span>               
             </div>
          
             <div className="row row-cols-1 row-cols-md-3">
                { this.filter() }
-            </div>
-            
+            </div>         
             
          </div>
       )
